@@ -169,7 +169,7 @@ class Siteimprove_Admin {
 
 		if ( ! empty( $public_url ) ) {
 			$parsed_url = wp_parse_url( $url );
-			$url        = "$parsed_url[scheme]://$public_url$parsed_url[path]" . ( isset( $parsed_url['query'] ) ? "?$parsed_url[query]" : '' );
+			$url        = "$public_url$parsed_url[path]" . ( isset( $parsed_url['query'] ) ? "?$parsed_url[query]" : '' );
 		}
 
 		$si_js_args = array(
